@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <!-- <title>Joseph Kang's Portfolio</title> -->
+        <!-- <link rel="stylesheet"  -->
+        <style type="text/css">
+
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,600&family=Kaushan+Script&family=Noto+Serif:ital@1&display=swap');
+
+            html{
+                overflow-x:hidden;
+            }
+
+            body {
+                margin: 0;
+                background: linear-gradient(135deg, #00ff83,#0bd3d3,#f890e7);
+	            background-size: 100% 100%;
+                min-height: 100vh;
+            }
+
+            .titlediv {
+                width: 30vh;
+                margin: auto;
+                text-align: center;
+                display:block;
+                font-family: 'Noto Serif', serif;
+                margin-top:70px;
+                margin-bottom:70px;
+                font-size: 180%;
+            }
+
+            .container{
+                position:relative;
+                display:flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content:center;
+                align-items: right;
+                width:100vw;
+                margin:auto;
+                /* background-color: gray; */
+            }
+
+            .works{
+                width:40%;
+                background-color: lavender;
+                position:relative;
+                display:flex;
+                flex-direction:row;
+                justify-content: space-evenly;
+                align-items:center;
+                margin: auto;
+                margin-top:30px;
+                margin-bottom:30px;
+                padding:0;
+                
+                
+            }
+
+            .description {
+                width:40%;
+                text-align:left;
+                margin: 20px;
+                font-family: 'Merriweather Sans', sans-serif;
+                
+
+                
+            }
+
+            .description h2{
+                font-size: 100%;
+            }
+
+            .description p1{
+                font-size: 80%;
+            }
+
+            .imagebox{
+                width:290px;
+                height:180px;
+                background-color:transparent;
+                margin:20px;
+                position:relative;
+                display:flex;
+                justify-content: center;
+            }
+
+            
+            .infoModal {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: 99999;
+            opacity: 0;
+            transition: opacity 400ms ease-in;
+            pointer-events: none;
+            
+            }
+
+            .infoModal:target {
+            opacity: 1;
+            pointer-events: auto;
+            }
+
+            .infoModal > div {
+            width: 900px;
+            height: 800px;
+            position: relative;
+            margin: auto;
+            background-color: white;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            }
+
+            #closeup1 > div iframe{
+                width: 808px;
+                height: 665px;
+                overflow: hidden;
+            }
+
+            #closeup2 > div iframe{
+                width:900px;
+                height:800px;
+            }
+
+
+            .close {
+            text-decoration: none;
+            font-family: 'Merriweather Sans', sans-serif;
+            }
+
+            .closeBtn {
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            color: black;
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+
+            .close:hover {
+            color: white;
+            }
+
+            .closeBtn:hover {
+            background-color: black;
+            }
+
+
+            footer{
+                margin-top:auto;
+                background-color: darkgrey;
+                width: 100%;
+                position:relative;
+                left:0;
+                bottom:0px;
+                text-align:center; 
+                height:150px;
+                margin-top:120px;
+            }
+
+            .joeyboy {
+                background-color: transparent;
+                margin: auto;
+                width:40%;
+                height:20%;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                
+            }
+
+            .joeyboy p{
+                color:lavender;
+                scale:1.8;
+                font-family: 'Merriweather Sans', sans-serif;
+            }
+
+            /* Tablet Size */
+            @media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+            .container{
+                position:relative;
+                display:flex;
+                flex-direction: column;
+                justify-content:center;
+
+            }
+
+            .works{
+                width:80%;
+            }
+
+            .infoModal{
+                display:flex;
+                flex-direction: column;
+                justify-content:center;
+            }
+
+            .infoModal > div {
+            position: relative;
+            margin: auto;
+            width:75vw;
+            overflow:hidden;
+            }
+
+            .infoModal > div iframe{
+            scale:60%;
+            overflow:hidden;
+            }
+        }
+            /* Mobile phones and smaller screens */
+            @media only screen and (max-width: 768px) {
+                .container{
+                position:relative;
+                display:flex;
+                flex-direction: column;
+                justify-content:center;
+            }
+
+            .works{
+                width:90%;
+            }
+
+            .infoModal{
+                display:flex;
+                flex-direction: column;
+                justify-content:center;
+            }
+
+            .infoModal > div {
+            position: relative;
+            margin: auto;
+            width:75vw;
+            overflow:hidden;
+            }
+
+            .infoModal > div iframe{
+            scale:55%;
+            overflow:hidden;
+            }
+
+        }
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class="titlediv">
+            <h1>PROJECTS</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="works">
+                <div class="imagebox" >
+                    <a href="#closeup1">
+                       <img src="../pictures/ikeclockpic.jpg" alt="pic of ike clock">
+                    </a>
+                </div>
+
+                <div class="description">
+                    <h2>Ike: Time-Based Media</h2>
+                    <p1>"Pixel Dreams" is a digital art project that presents a surreal and colorful world created through advanced generative algorithms. 
+                        The artwork evolves and transforms in real-time, featuring vibrant hues, intricate patterns, and strange creatures. 
+                        An immersive soundtrack accompanies the artwork, responding to the viewer's movements, resulting in a dynamic and captivating experience.
+                    </p1>
+                </div>
+
+            </div>
+            
+                
+
+            <div class="works">
+                <div class="imagebox">
+                    <a href="#closeup2">
+                        <img src="../pictures/gen-art-fall.png" alt="pic of js generative art project">
+                    </a>
+                </div>
+                <div class="description">
+                    <h2>Seasons: Generative Art</h2>
+                    <p1>"Pixel Dreams" is a digital art project that presents a surreal and colorful world created through advanced generative algorithms. 
+                        The artwork evolves and transforms in real-time, featuring vibrant hues, intricate patterns, and strange creatures. 
+                        An immersive soundtrack accompanies the artwork, responding to the viewer's movements, resulting in a dynamic and captivating experience.
+                    </p1>
+                </div>
+            </div>
+
+            <div class="works">
+                <div class="imagebox">
+                        <a href="#closeup3">
+                            <img src="../pictures/Joseph Kang - Political Poster Final.png" alt="pic of political poster">
+                        </a>
+                </div>
+                <div class="description">
+                    <h2>Climate Change Poster</h2>
+                    <p1>"Pixel Dreams" is a digital art project that presents a surreal and colorful world created through advanced generative algorithms. 
+                        The artwork evolves and transforms in real-time, featuring vibrant hues, intricate patterns, and strange creatures. 
+                        An immersive soundtrack accompanies the artwork, responding to the viewer's movements, resulting in a dynamic and captivating experience.
+                    </p1>
+                </div>
+            </div>
+
+            <div class="works">
+                <div class="imagebox">
+                    <a href="#closeup4">
+                        <img src="../pictures/Joseph Kang - Things to Look At Final.png" alt="pic of sign made for client">
+                    </a>
+                </div>
+                <div class="description">
+                    <h2>Things to Look At Studios</h2>
+                    <p1>"Pixel Dreams" is a digital art project that presents a surreal and colorful world created through advanced generative algorithms. 
+                        The artwork evolves and transforms in real-time, featuring vibrant hues, intricate patterns, and strange creatures. 
+                        An immersive soundtrack accompanies the artwork, responding to the viewer's movements, resulting in a dynamic and captivating experience.
+                    </p1>
+                </div>
+            </div>
+
+            <div class="works">
+                <div class="imagebox">
+                    <a href="#closeup5">
+                        <img src="../pictures/Joseph Kang multimedia.png" alt="artwork from high school">
+                    </a>
+                </div>
+                <div class="description">
+                    <h2>Psychedelic Self Portrait</h2>
+                    <p1>"Pixel Dreams" is a digital art project that presents a surreal and colorful world created through advanced generative algorithms. 
+                        The artwork evolves and transforms in real-time, featuring vibrant hues, intricate patterns, and strange creatures. 
+                        An immersive soundtrack accompanies the artwork, responding to the viewer's movements, resulting in a dynamic and captivating experience.
+                    </p1>
+                </div>
+            </div>
+
+            <div class="works">
+                <div class="imagebox">
+                    <a href="#closeup5">
+                        <img src="../pictures/Joseph Kang self porttrait.png" alt="artwork from high school 2">
+                    </a>
+                </div>
+                <div class="description">
+                    <h2>Ditch: Multi-media Art</h2>
+                    <p1>"Pixel Dreams" is a digital art project that presents a surreal and colorful world created through advanced generative algorithms. 
+                        The artwork evolves and transforms in real-time, featuring vibrant hues, intricate patterns, and strange creatures. 
+                        An immersive soundtrack accompanies the artwork, responding to the viewer's movements, resulting in a dynamic and captivating experience.
+                    </p1>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="infoModal" id="closeup1">
+            <div>
+              <div class="closeBtn">
+                <a href="#close" title="close" class="close">X</a>
+              </div>
+              <iframe src="https://openprocessing.org/sketch/1859827/embed/" width="800" height="600"></iframe>
+            </div>
+          </div>
+
+          <div class="infoModal" id="closeup2">
+            <div>
+              <div class="closeBtn">
+                <a href="#close" title="close" class="close">X</a>
+              </div>
+              <iframe src="https://openprocessing.org/sketch/1862750/embed/" width="400px" height="400px"></iframe>
+            </div>
+          </div>
+
+          <div class="infoModal" id="closeup3">
+            <div>
+              <div class="closeBtn">
+                <a href="#close" title="close" class="close">X</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="infoModal" id="closeup4">
+            <div>
+              <div class="closeBtn">
+                <a href="#close" title="close" class="close">X</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="infoModal" id="closeup5">
+            <div>
+              <div class="closeBtn">
+                <a href="#close" title="close" class="close">X</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="infoModal" id="closeup6">
+            <div>
+              <div class="closeBtn">
+                <a href="#close" title="close" class="close">X</a>
+              </div>
+            </div>
+          </div>
+
+
+
+    </body>
+
+    <footer>
+        <div class="joeyboy">
+            <p>@2023 Joseph Kang</p>
+        </div>
+        </footer>
+    </footer>
+
+</html>

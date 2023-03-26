@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script> -->
+        <!-- <title>Joseph Kang's Portfolio</title> -->
+        <!-- <link rel="stylesheet"  -->
+        <style type="text/css">
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,600&family=Kaushan+Script&family=Merriweather+Sans&family=Noto+Serif:ital@1&display=swap');
+
+
+            html{
+                overflow-x:hidden;
+            }
+
+            footer{
+                margin-top:auto;
+                background-color: darkgrey;
+                width: 100%;
+                position:relative;
+                left:0;
+                bottom:0px;
+                text-align:center; 
+                height:150px;
+                margin-top:120px;
+            }
+
+            .joeyboy {
+                background-color: transparent;
+                margin: auto;
+                width:40%;
+                height:20%;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                
+            }
+
+            .joeyboy p{
+                color:lavender;
+                scale:1.8;
+                font-family: 'Merriweather Sans', sans-serif;
+            }
+
+            body {
+                margin: 0;
+                background: linear-gradient(135deg, #00ff83,#0bd3d3,#f890e7);
+	            background-size: 100% 100%;
+                min-height: 100vh;
+            }
+
+            .headerstuff{
+                background-color: transparent;
+                width: 50vw;
+                height: 50vh; 
+                position: relative;
+                margin:auto;  
+                padding-top:60px;   
+                padding-bottom:50px;      
+            } 
+            
+
+
+            .titlediv{
+                background-color: lavender;
+                z-index: 99999;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height:60px;
+                width:600px;
+            }
+
+            .titlediv h1{
+                scale: 95%;
+                text-align: center;
+                font-family: 'IBM Plex Mono', monospace;
+            }
+
+            .giffy{
+                width:300px;
+                height:300px;
+                display: flex;
+                justify-content:center;
+                margin:auto;
+                position:relative;
+                bottom:-100px;
+            }
+
+            .giffy img{
+                scale:100%;
+            }
+
+
+            .ikeclock{
+                background-color: transparent;
+                margin: auto;
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                padding-bottom:50px;
+                
+            }
+            
+            .ikeclock iframe{
+                width: 808px;
+                height: 665px;
+                overflow: hidden;
+            }
+
+            .ikeclock article p{
+                text-align:right;
+                font-family: 'Merriweather Sans', sans-serif;
+            }
+            
+            .container{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content:space-around;
+                align-items: center;
+                FLEX-WRAP: wrap; 
+                gap: 0px;
+                padding-top:30px;
+                padding-bottom:30px;
+            
+            }
+
+            .menu{
+                position: relative;
+                width: 20%;
+                text-decoration:none;
+                height:50%;
+                overflow:hidden;
+            }
+
+ 
+
+            .menu img {
+                display: block;
+                width:100%;
+            }
+
+            .mask{
+                position:absolute;
+                top:0;
+                left:0;
+                right:0;
+                bottom:0;
+                display: flex;
+                background-color: black;
+                transition:0.5s ease;
+                opacity: 0;
+                z-index: 99999;
+            }
+
+            .menu:hover .mask{
+                opacity:0.4;
+            }
+            
+            .masktext{
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                text-decoration: none;
+                opacity: 1;
+                color:white;
+                font-size: 150%;
+                font-family: 'Noto Serif', serif;
+            }
+
+            /* Tablet Size */
+            @media only screen and (min-width: 768px) and (max-width: 1024px) {
+             
+                .headerstuff{
+                    /* background-color: blue; */
+                }
+
+                .menu{
+                position: relative;
+                margin:auto;
+                width: 50%;
+                display:block;
+                margin: 35px;
+                text-decoration:none;
+                background-color: grey;
+                overflow:hidden;
+                }
+
+                .mask{
+                    opacity:0.5;
+                }
+
+            }
+
+            /* Mobile phones and smaller screens */
+             @media only screen and (max-width: 768px) {
+                
+                .ikeclock{
+                background-color: transparent;
+                margin: auto;
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                padding-bottom:50px;
+                
+            }
+
+                .ikeclock iframe{
+                scale:50%;
+                overflow: hidden;
+                }
+
+                .ikeclock article p{
+                position:absolute;
+                text-align:center;
+                bottom:150px;
+                left:0;
+                right:0;
+                
+                }
+
+                .container{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items:center;
+                justify-content:space-between;
+                margin:auto;
+                /* FLEX-WRAP: wrap;  */
+                gap: 0px;
+                padding-top:30px;
+                padding-bottom:30px;
+                
+                }
+
+                .menu{
+                position: relative;
+                margin:auto;
+                width: 50%;
+                display:block;
+                margin: 35px;
+                text-decoration:none;
+                background-color: grey;
+                overflow:hidden;
+                }
+
+                .mask{
+                    opacity:0.5;
+                }
+
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class = "headerstuff"> 
+               <div class="titlediv">
+                    <h1>Joseph Kang's Portflio</h1>
+               </div>
+                
+                <div class="giffy">
+                    <img src="pictures/hurt-feelings.gif">
+                </div>
+                 
+        </div>
+
+        <div class = "ikeclock">
+            
+            <article>
+                <iframe src="https://openprocessing.org/sketch/1859827/embed/" width="800" height="600"></iframe>
+                <!-- <div class="javadrawing">
+                    <script src="javafiles/sketch.js"></script>
+                </div> -->
+                <p>Ike Broflovski Clock</p>
+            </article>
+        </div>
+
+        <div class="container">
+
+
+            <div class="menu">
+                <a href="pages/about me.html">
+                    <img src ="pictures/File_000.png" alt="about me picture (pic of tanjiro from demon slayer)">
+                    <div class="mask">
+                        <div class="masktext">ABOUT ME</div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="menu">
+                <a href="pages/projects.html">
+                    <img src ="pictures/Hotpot.png" alt="projects picture (ai generated picture)">
+                    <div class="mask">
+                        <div class="masktext">PROJECTS</div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="menu">
+                <a href="pages/sh1ts and giggles.html">
+                    <img src ="pictures/cropped-nasa-photo.png" alt="contacts picture (nasa image)">
+                    <div class="mask">
+                        <div class="masktext">CONTACTS</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+    </body>
+
+    <footer>
+        <div class="joeyboy">
+            <p>@2023 Joseph Kang</p>
+        </div>
+        </footer>
+    </footer>
+
+
+</html>
